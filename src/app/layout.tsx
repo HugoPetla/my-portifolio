@@ -1,13 +1,8 @@
-import Navbar from "@/components/Navbar.tsx/Navbar";
-import "./globals.css";
-import { Inter } from "next/font/google";
+import Navbar from "./components/Navbar";
+import "./styles/globals.css";
+import { Montserrat } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
-
-export const metadata = {
-  title: "My portifolio",
-  description: "This is a page to show a little about me.",
-};
+const mont = Montserrat({ subsets: ["latin"], variable: "--font-mont" });
 
 export default function RootLayout({
   children,
@@ -16,7 +11,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={mont.className}>
         <Navbar />
         {children}
       </body>
