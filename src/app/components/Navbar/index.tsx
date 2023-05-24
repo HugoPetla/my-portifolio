@@ -10,14 +10,14 @@ import {
   GithubIcon,
   LinkedInIcon,
   PinterestIcon,
-  TwitterIcon,
+  TwitterIcon
 } from "../Icons";
 import { Logo } from "../Logo";
 
 const CustomLink = ({
   href,
   title,
-  className = "",
+  className = ""
 }: {
   href: string;
   title: string;
@@ -50,7 +50,7 @@ const Navbar = () => {
       <nav className="flex items-center justify-center flex-wrap">
         <motion.a
           className="w-6 mx-3"
-          href="https://twitter.com"
+          href="https://twitter.com/7HuGo_"
           target={"_blank"}
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
@@ -59,7 +59,7 @@ const Navbar = () => {
         </motion.a>
         <motion.a
           className="w-6 mx-3"
-          href="https://twitter.com"
+          href="https://github.com/HugoPetlalink"
           target={"_blank"}
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
@@ -68,7 +68,7 @@ const Navbar = () => {
         </motion.a>
         <motion.a
           className="w-6 mx-3"
-          href="https://twitter.com"
+          href="https://www.linkedin.com/in/hugo-petla/"
           target={"_blank"}
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
@@ -77,7 +77,7 @@ const Navbar = () => {
         </motion.a>
         <motion.a
           className="w-6 mx-3"
-          href="https://twitter.com"
+          href="https://br.pinterest.com"
           target={"_blank"}
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
@@ -86,7 +86,7 @@ const Navbar = () => {
         </motion.a>
         <motion.a
           className="w-6 ml-3"
-          href="https://twitter.com"
+          href="https://dribbble.com"
           target={"_blank"}
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
