@@ -1,6 +1,6 @@
 "use client";
-import { Footer } from "./components/Footer";
-import Navbar from "./components/Navbar";
+import { Footer } from "../components/Footer";
+import Navbar from "../components/Navbar";
 import "./styles/globals.css";
 import { Montserrat } from "next/font/google";
 

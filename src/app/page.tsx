@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { Layout } from "./components/Layout";
+import { Layout } from "../components/Layout";
 import profilePic from "@/public/images/profile/developer-pic-1.png";
-import { AnimatedText } from "./components/AnimatedText";
+import { AnimatedText } from "../components/AnimatedText";
 import Link from "next/link";
-import { LinkArrow } from "./components/Icons";
+import { LinkArrow } from "../components/Icons";
 
 export default function Home() {
   return (
