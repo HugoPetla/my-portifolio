@@ -28,7 +28,7 @@ const AnimatedNumbers = ({ value }: { value: number }) => {
     });
   }, [springValue, value]);
 
-  return <span>{value}</span>;
+  return <span ref={ref}>{value}</span>;
 };
 
 export default function About() {
@@ -72,20 +72,24 @@ export default function About() {
           <div className="col-span-2 flex flex-col items-end justify-between">
             <div className="flex flex-col items-end justify-center">
               <span className="inline-block text-7xl font-bold">
-                <AnimatedNumbers value={50} />
+                <AnimatedNumbers value={50} />+
               </span>
               <h2 className="text-xl font-medium capitalize text-dark/75">
                 satisfied clients
               </h2>
             </div>
             <div className="flex flex-col items-end justify-center">
-              <span className="inline-block text-7xl font-bold">40+</span>
+              <span className="inline-block text-7xl font-bold">
+                <AnimatedNumbers value={40} />+
+              </span>
               <h2 className="text-xl font-medium capitalize text-dark/75">
                 projects completed
               </h2>
             </div>
             <div className="flex flex-col items-end justify-center">
-              <span className="inline-block text-7xl font-bold">4+</span>
+              <span className="inline-block text-7xl font-bold">
+                <AnimatedNumbers value={4} />+
+              </span>
               <h2 className="text-xl font-medium capitalize text-dark/75">
                 years of experience
               </h2>
