@@ -6,13 +6,14 @@ import { useEffect, useRef } from "react";
 import { AnimatedText } from "@/components/AnimatedText";
 import profilePic from "@/public/images/profile/Hugo-Petla-3x4.jpg";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
+import { Skills } from "@/components/Skills";
 
 const AnimatedNumbers = ({ value }: { value: number }) => {
   const ref = useRef<HTMLDivElement | null>(null);
 
   const motionValue = useMotionValue(0);
   const springValue = useSpring(motionValue, { duration: 3000 });
-  const isInView = useInView(ref);
+  const isInView = useInView(ref, { once: true });
 
   useEffect(() => {
     if (isInView) {
@@ -96,6 +97,7 @@ export default function About() {
             </div>
           </div>
         </div>
+        <Skills />
       </main>
     </div>
   );
