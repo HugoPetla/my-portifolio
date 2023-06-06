@@ -42,7 +42,7 @@ export default function About() {
           content="here you find some things about Hugo Petla"
         />
       </Head>
-      <main className="flex flex-col items-center text-dark w-full justify-center">
+      <main className="flex flex-col items-center text-dark w-full justify-center pb-16">
         <AnimatedText text="Passion Fuels Purpose!" className="py-16" />
         <div className="grid w-full grid-cols-8 gap-16">
           <div className="col-span-3 flex flex-col items-start justify-start">
