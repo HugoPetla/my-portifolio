@@ -7,6 +7,7 @@ import { AnimatedText } from "@/components/AnimatedText";
 import profilePic from "@/public/images/profile/Hugo-Petla-3x4.jpg";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import { Skills } from "@/components/Skills";
+import Experience from "@/components/Experience";
 
 const AnimatedNumbers = ({ value }: { value: number }) => {
   const ref = useRef<HTMLDivElement | null>(null);
@@ -98,6 +99,7 @@ export default function About() {
           </div>
         </div>
         <Skills />
+        <Experience />
       </main>
     </div>
   );
