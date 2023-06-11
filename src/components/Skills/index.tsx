@@ -19,8 +19,8 @@ const Skill = ({ name, x, y }: { name: string; x: string; y: string }) => {
 
 export const Skills = () => {
   return (
-    <>
-      <h2 className="font-bold text-8xl mt-32 w-full text-center">Skills</h2>
+    <div className="w-full my-32">
+      <h2 className="font-bold text-8xl w-full text-center">Skills</h2>
       <div className="w-full h-screen relative flex items-center justify-center rounded-full bg-circularLight">
         <Skill name="Web" x="0vw" y="0vw" />
         <Skill name="CSS" x="-5vw" y="-10vw" />
@@ -34,6 +34,6 @@ export const Skills = () => {
         <Skill name="MUI" x="10vw" y="-5vw" />
         <Skill name="Jest" x="-25vw" y="15vw" />
       </div>
-    </>
+    </div>
   );
 };
