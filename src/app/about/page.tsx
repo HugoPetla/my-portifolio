@@ -89,12 +89,12 @@ export default function About() {
               with stunning interfaces and seamless functionality.
             </p>
           </div>
-          <div className="col-span-3 relative w-64 h-max rounded-2xl border-2 border-solid border-dark bg-light p-8">
+          <div className="col-span-3 relative w-80 h-max rounded-2xl border-2 border-solid border-dark bg-light p-8">
             <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark" />
             <Image
               src={profilePic}
               alt="HugoPetlaProfile"
-              className="w-64 h-auto rounded-2xl"
+              className="w-80 h-auto rounded-2xl"
             />
           </div>
 

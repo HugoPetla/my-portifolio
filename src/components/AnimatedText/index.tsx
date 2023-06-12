@@ -33,7 +33,7 @@ export const AnimatedText = ({
   className,
 }: {
   text: string;
-  className: string;
+  className?: string;
 }) => {
   return (
     <div className="w-full mx-auto py-2 flex items-center justify-center text-center overflow-hidden">
