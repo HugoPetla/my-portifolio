@@ -5,16 +5,36 @@ import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 
 import {
-  DribbbleIcon,
   GithubIcon,
   LinkedInIcon,
   MoonIcon,
-  PinterestIcon,
   SunIcon,
   TwitterIcon,
 } from "../Icons";
 import { Logo } from "../Logo";
 import useThemeSwitcher from "@/hooks/useThemeSwitcher";
+
+const personalLinks = [
+  {
+    link: "https://www.linkedin.com/in/hugo-petla/",
+    icon: "linkedin",
+  },
+  { link: "https://github.com/HugoPetla", icon: "github" },
+  { link: "https://twitter.com/7HuGo_", icon: "twitter" },
+];
+
+function getIconComponent(iconName: string) {
+  switch (iconName) {
+    case "github":
+      return GithubIcon;
+    case "twitter":
+      return TwitterIcon;
+    case "linkedin":
+      return LinkedInIcon;
+    default:
+      return null;
+  }
+}
 
 const CustomLink = ({
   href,
@@ -52,52 +72,30 @@ const Navbar = () => {
         <CustomLink href="/articles" title="Articles" className="ml-4" />
       </nav>
       <nav className="flex items-center justify-center flex-wrap">
-        <motion.a
-          className="w-6 mx-3"
-          href="https://twitter.com/7HuGo_"
-          target={"_blank"}
-          whileHover={{ y: -2 }}
-          whileTap={{ scale: 0.9 }}
+        {personalLinks.map((personalLink, index) => {
+          const IconComponent = getIconComponent(personalLink.icon);
+
+          if (!IconComponent) {
+            return null;
+          }
+
+          return (
+            <motion.a
+              className="w-6 mx-3"
+              href={personalLink.link}
+              target={"_blank"}
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.9 }}
+              key={index}
+            >
+              <IconComponent />
+            </motion.a>
+          );
+        })}
+        <button
+          className="ml-3"
+          onClick={() => setMode(mode === "light" ? "dark" : "light")}
         >
-          <TwitterIcon />
-        </motion.a>
-        <motion.a
-          className="w-6 mx-3"
-          href="https://github.com/HugoPetlalink"
-          target={"_blank"}
-          whileHover={{ y: -2 }}
-          whileTap={{ scale: 0.9 }}
-        >
-          <GithubIcon />
-        </motion.a>
-        <motion.a
-          className="w-6 mx-3"
-          href="https://www.linkedin.com/in/hugo-petla/"
-          target={"_blank"}
-          whileHover={{ y: -2 }}
-          whileTap={{ scale: 0.9 }}
-        >
-          <LinkedInIcon />
-        </motion.a>
-        <motion.a
-          className="w-6 mx-3"
-          href="https://br.pinterest.com"
-          target={"_blank"}
-          whileHover={{ y: -2 }}
-          whileTap={{ scale: 0.9 }}
-        >
-          <PinterestIcon />
-        </motion.a>
-        <motion.a
-          className="w-6 ml-3"
-          href="https://dribbble.com"
-          target={"_blank"}
-          whileHover={{ y: -2 }}
-          whileTap={{ scale: 0.9 }}
-        >
-          <DribbbleIcon />
-        </motion.a>
-        <button onClick={() => setMode(mode === "light" ? "dark" : "light")}>
           {mode === "dark" ? (
             <SunIcon className="fill-dark" />
           ) : (
