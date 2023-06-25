@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from "react";
 
-const useThemeSwitcher = () => {
-  const preferDarkQuery = "(prefer-color-theme-scheme: dark)";
-  const [mode, setMode] = useState<string | undefined>("");
+const useThemeSwitcher = (): [
+  string,
+  React.Dispatch<React.SetStateAction<string>>
+] => {
+  const preferDarkQuery = "(prefer-color-scheme: dark)";
+  const [mode, setMode] = useState<string>("light");
 
   useEffect(() => {
     const mediaQuery = window.matchMedia(preferDarkQuery);
     const userPreference = window.localStorage.getItem("theme");
 
     const handleChangeMediaQuery = () => {
-      let check;
+      let check = "light";
       if (userPreference) {
         check = userPreference === "dark" ? "dark" : "light";
       }

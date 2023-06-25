@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import profilePic from "@/public/images/profile/dev-pic.png";
 import { AnimatedText } from "../components/AnimatedText";

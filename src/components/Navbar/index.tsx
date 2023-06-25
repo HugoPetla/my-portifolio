@@ -1,5 +1,4 @@
 "use client";
-
 import Link from "next/link";
 import React from "react";
 import { usePathname } from "next/navigation";
@@ -98,7 +97,7 @@ const Navbar = () => {
         >
           <DribbbleIcon />
         </motion.a>
-        <button onClick={() => console.log("clicked")}>
+        <button onClick={() => setMode(mode === "light" ? "dark" : "light")}>
           {mode === "dark" ? (
             <SunIcon className="fill-dark" />
           ) : (
