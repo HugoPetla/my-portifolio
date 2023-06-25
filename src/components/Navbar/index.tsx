@@ -23,6 +23,13 @@ const personalLinks = [
   { link: "https://twitter.com/7HuGo_", icon: "twitter" },
 ];
 
+const navLinks = [
+  { link: "/", title: "Home" },
+  { link: "/about", title: "About" },
+  { link: "/projects", title: "Projects" },
+  { link: "/articles", title: "Articles" },
+];
+
 function getIconComponent(iconName: string) {
   switch (iconName) {
     case "github":
@@ -66,10 +73,16 @@ const Navbar = () => {
   return (
     <header className="w-full px-32 py-8 font-medium flex items-center justify-between bg-light">
       <nav>
-        <CustomLink href="/" title="Home" className="mr-4" />
-        <CustomLink href="/about" title="About" className="mx-4" />
-        <CustomLink href="/projects" title="Projects" className="mx-4" />
-        <CustomLink href="/articles" title="Articles" className="ml-4" />
+        {navLinks.map((link, index) => {
+          return (
+            <CustomLink
+              key={index}
+              href={link.link}
+              title={link.title}
+              className=":first-child:mr-4 :last-child:ml-4 mx-4"
+            />
+          );
+        })}
       </nav>
       <nav className="flex items-center justify-center flex-wrap">
         {personalLinks.map((personalLink, index) => {
