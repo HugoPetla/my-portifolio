@@ -4,7 +4,7 @@ import { GithubIcon } from "@/components/Icons";
 import Head from "next/head";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import ProjectImg from "@/public/images/projects/crypto-screener-cover-image.jpg";
+import ProjectImg from "@/public/images/projects/Project_landpage.png";
 
 interface CardProjectProps {
   title: string;
