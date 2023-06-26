@@ -8,11 +8,19 @@ export const Footer = () => {
         <span>
           Built with <span className="text-primary text-2xl px-1">&#9825;</span>
           by&nbsp;
-          <Link href="/" className="underline" target="_blank">
+          <Link
+            href="https://www.linkedin.com/in/hugo-petla/"
+            className="underline"
+            target="_blank"
+          >
             Hugo Petla
           </Link>
         </span>
-        <Link href="/" className="underline" target="_blank">
+        <Link
+          href="mailto:hugopetla@gmail.com"
+          className="underline"
+          target="_blank"
+        >
           Say hello
         </Link>
       </div>

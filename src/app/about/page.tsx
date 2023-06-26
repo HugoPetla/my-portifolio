@@ -35,7 +35,7 @@ const AnimatedNumbers = ({ value }: { value: number }) => {
 
 const experience = [
   {
-    position: "Frontend",
+    position: "Frontend Senior",
     company: "Compass Uol",
     companyLink: "https://compass.uol/en/home/",
     address:
@@ -43,9 +43,54 @@ const experience = [
     work: "In my role as a Frontend Developer, I specialize in web development using Nextjs/React. With a strong understanding of both client and server-side development, I am skilled in utilizing various libraries such as Redux, Material-UI (mui), Lodash, and others to deliver high-quality web applications. My expertise in developing responsive and accessible user interfaces, optimizing performance, and implementing best practices for modern web development has enabled me to deliver outstanding solutions for clients across diverse industries. I am committed to staying up-to-date with the latest web technologies, tools, and frameworks and applying them to create compelling and visually engaging web applications that meet user needs and exceed expectations.",
     time: "December 2021 - Present",
   },
+  {
+    position: "Frontend",
+    company: "Schaffen It",
+    companyLink: "https://schaffen-it.com/",
+    address:
+      "527 Carlos Cavalcantti Ave, Suite 1. Uvaranas, Ponta Grossa, Paraná, Brazil",
+    work: "Work in collaboration with the squad to develop and maintain back-office applications and interfaces in order to improve administrative operations. Responsible for prototyping UI / UX interface design, simulating the user experience.",
+    time: "October 2020 - December 2021",
+  },
+  {
+    position: "Learning Assistant",
+    company: "Uptime",
+    companyLink: "https://uptime.com.br/site-ingles/",
+    address:
+      "802 Julio de Castilho St, Center, Ponta Grossa, PR 84010-220, Brazil",
+    work: "I worked as the responsible for managing the team of instructors and service; organizing the classes; monitoring the collective and individual learning process of the students; and promoting conflict resolution.",
+    time: "May 2019 - Setember 2020",
+  },
+  {
+    position: "Instructor",
+    company: "Uptime",
+    companyLink: "https://uptime.com.br/site-ingles/",
+    address:
+      "802 Julio de Castilho St, Center, Ponta Grossa, PR 84010-220, Brazil",
+    work: "I worked at UPTIME as an English instructor, where I had the opportunity to contribute to their mission of transforming lives through foreign language education, fostering entrepreneurship, and developing leaders.",
+    time: "September 2018 - May 2019",
+  },
+  {
+    position: "Frontend",
+    company: "KMM ",
+    companyLink: "https://kmm.com.br/",
+    address:
+      "802 Julio de Castilho St, Center, Ponta Grossa, PR 84010-220, Brazil",
+    work: "I worked in the mobile development of the CRM system (customer relationship management), using the Ionic framework. Soon after, I became responsible for the mobile development of the Route Now system (collection and transport management) of the Via Lácteos company.",
+    time: "March 2017 - March 2018",
+  },
 ];
 
 const education = [
+  {
+    position: "Master in Applied Computing",
+    company: "Universidade Estadual de Ponta Grossa - UEPG",
+    companyLink: "https://www.uepg.br/",
+    address:
+      "General Carlos Cavalcanti Avenue, Uvaranas, Ponta Grossa, PR 84030-000, Brazil",
+    work: "I hold a Master's degree in Computer Engineering from UEPG, which is ranked among the top 50 universities in Brazil according to the QS Latin America University Rankings and Times Higher Education (THE). For my Master's thesis, I focused on the traceability of commodities, specifically yerba mate, using blockchain technology.",
+    time: "March 2018 - May 2020",
+  },
   {
     position: "Bachelor of Computer Engineering ",
     company: "Universidade Estadual de Ponta Grossa - UEPG",
