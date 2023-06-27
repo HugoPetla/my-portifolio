@@ -8,6 +8,7 @@ import profilePic from "@/public/images/profile/Hugo-Petla-3x4.jpg";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import { Skills } from "@/components/Skills";
 import LifeTimeline from "@/components/LifeTimeline";
+import { validateHeaderValue } from "http";
 
 const AnimatedNumbers = ({ value }: { value: number }) => {
   const ref = useRef<HTMLDivElement | null>(null);
@@ -102,6 +103,12 @@ const education = [
   },
 ];
 
+const mainPersonalNumbers = [
+  { value: 50, title: "satisfied clients" },
+  { value: 40, title: "projects completed" },
+  { value: 4, title: "years of experience" },
+];
+
 export default function About() {
   return (
     <div className="pt-0 pb-0 px-32">
@@ -112,14 +119,14 @@ export default function About() {
           content="here you find some things about Hugo Petla"
         />
       </Head>
-      <main className="flex flex-col items-center text-dark w-full justify-center pb-16">
+      <main className="flex flex-col items-center text-dark w-full justify-center pb-16 dark:text-light">
         <AnimatedText
           text="Crafting purposeful experiences"
           className="py-16"
         />
         <div className="grid w-full grid-cols-8 gap-16">
           <div className="col-span-3 flex flex-col items-start justify-start">
-            <h2 className="mb-4 text-lg font-bold uppercase text-dark/75">
+            <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
               Biography
             </h2>
             <p className="my-4 font-medium">
@@ -134,8 +141,8 @@ export default function About() {
               with stunning interfaces and seamless functionality.
             </p>
           </div>
-          <div className="col-span-3 relative w-80 h-max rounded-2xl border-2 border-solid border-dark bg-light p-8">
-            <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark" />
+          <div className="col-span-3 relative w-80 h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 dark:border-light dark:bg-dark">
+            <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark dark:bg-light" />
             <Image
               src={profilePic}
               alt="HugoPetlaProfile"
@@ -144,30 +151,21 @@ export default function About() {
           </div>
 
           <div className="col-span-2 flex flex-col items-end justify-between">
-            <div className="flex flex-col items-end justify-center">
-              <span className="inline-block text-7xl font-bold">
-                <AnimatedNumbers value={50} />+
-              </span>
-              <h2 className="text-xl font-medium capitalize text-dark/75">
-                satisfied clients
-              </h2>
-            </div>
-            <div className="flex flex-col items-end justify-center">
-              <span className="inline-block text-7xl font-bold">
-                <AnimatedNumbers value={40} />+
-              </span>
-              <h2 className="text-xl font-medium capitalize text-dark/75">
-                projects completed
-              </h2>
-            </div>
-            <div className="flex flex-col items-end justify-center">
-              <span className="inline-block text-7xl font-bold">
-                <AnimatedNumbers value={4} />+
-              </span>
-              <h2 className="text-xl font-medium capitalize text-dark/75">
-                years of experience
-              </h2>
-            </div>
+            {mainPersonalNumbers.map((personalNumber, index) => {
+              return (
+                <div
+                  className="flex flex-col items-end justify-center"
+                  key={index}
+                >
+                  <span className="inline-block text-7xl font-bold">
+                    <AnimatedNumbers value={personalNumber.value} />+
+                  </span>
+                  <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75">
+                    {personalNumber.title}
+                  </h2>
+                </div>
+              );
+            })}
           </div>
         </div>
         <Skills />

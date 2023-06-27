@@ -27,7 +27,7 @@ const CardProject = ({
     <article
       className={`w-full flex items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-2xl ${
         type === "Featured Project" ? "p-12" : "flex-col p-6"
-      }`}
+      } dark:border-light dark:bg-dark`}
     >
       <Link
         className={`cursor-pointer overflow-hidden rounded-lg ${
@@ -43,7 +43,9 @@ const CardProject = ({
           type === "Featured Project" ? "w-1/2 pl-6" : "w-full mt-4"
         }`}
       >
-        <span className="text-primary font-medium text-xl">{type}</span>
+        <span className="text-primary font-medium text-xl dark:text-primaryDark">
+          {type}
+        </span>
         <Link
           href={link}
           target="_blank"
@@ -58,7 +60,9 @@ const CardProject = ({
           </h2>
         </Link>
         {type === "Featured Project" && (
-          <p className="my-2 font-medium text-dark">{summary}</p>
+          <p className="my-2 font-medium text-dark dark:text-light">
+            {summary}
+          </p>
         )}
         <div className="mt-2 flex items-center">
           <Link href={github} target="_blank">
@@ -69,7 +73,7 @@ const CardProject = ({
           <Link
             className={`ml-4 font-semibold ${
               type === "Featured Project"
-                ? "rounded-lg bg-dark text-light p-2 px-6 text-lg "
+                ? "rounded-lg bg-dark text-light p-2 px-6 text-lg dark:bg-light dark:text-dark"
                 : "underline"
             }`}
             href={link}
@@ -93,7 +97,7 @@ export default function Projects() {
           content="here you find some of my main projects"
         />
       </Head>
-      <main className="w-full mb-16 flex flex-col items-center justify-center pt-16">
+      <main className="w-full mb-16 flex flex-col items-center justify-center pt-16 dark:text-light">
         <AnimatedText
           text="Unleash your imagination, transcend your knowledge."
           className="mb-16"

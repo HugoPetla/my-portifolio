@@ -16,7 +16,7 @@ const Articles = () => {
           content="here you find some things that Hugo Petla had written"
         />
       </Head>
-      <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden min-h-full px-32">
+      <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden min-h-full px-32 dark:text-light">
         <div className="pt-16 pb-32">
           <AnimatedText text="Words Can Change the World" className="mb-16" />
           <ul className="grid grid-cols-2 gap-16">

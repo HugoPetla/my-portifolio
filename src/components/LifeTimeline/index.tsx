@@ -35,7 +35,7 @@ const Details = ({
           <a
             href={companyLink}
             target="_blank"
-            className="text-primary capitalize"
+            className="text-primary capitalize dark:text-primaryDark"
           >
             @{company}
           </a>
@@ -74,7 +74,7 @@ export default function LifeTimeline({ title, timeline }: LifeTimelineProps) {
       <div ref={ref} className="w-[75%] mx-auto relative">
         <motion.div
           style={{ scaleY: scrollYProgress }}
-          className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top"
+          className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:bg-light"
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4">
           {timeline.map((lifeEvent, key) => {

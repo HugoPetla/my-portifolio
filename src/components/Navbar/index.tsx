@@ -59,7 +59,7 @@ const CustomLink = ({
       <span
         className={`h-[1px] inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${
           pathname === href ? "w-full" : "w-0"
-        }`}
+        } dark:bg-light`}
       >
         &nbsp;
       </span>
@@ -71,7 +71,7 @@ const Navbar = () => {
   const [mode, setMode] = useThemeSwitcher();
 
   return (
-    <header className="w-full px-32 py-8 font-medium flex items-center justify-between bg-light">
+    <header className="w-full px-32 py-8 font-medium flex items-center justify-between bg-light dark:bg-dark dark:text-light">
       <nav>
         {navLinks.map((link, index) => {
           return (
@@ -106,7 +106,9 @@ const Navbar = () => {
           );
         })}
         <button
-          className="ml-3"
+          className={`ml-1 flex items-center justify-center rounded-full p-1 ${
+            mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
+          }`}
           onClick={() => setMode(mode === "light" ? "dark" : "light")}
         >
           {mode === "dark" ? (

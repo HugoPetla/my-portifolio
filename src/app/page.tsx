@@ -9,7 +9,7 @@ import { LinkArrow } from "../components/Icons";
 export default function Home() {
   return (
     <div className="pt-0 pb-0 px-32">
-      <main className="flex items-center text-dark w-full min-h-screen">
+      <main className="flex items-center text-dark w-full min-h-screen dark:text-light">
         <div className="flex items-center justify-around w-full">
           <div className="w-1/3">
             <Image
@@ -33,7 +33,7 @@ export default function Home() {
               <Link
                 href="/Profile_Hugo_Petla.pdf"
                 target="_blank"
-                className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark"
+                className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light"
                 download={true}
               >
                 Resume <LinkArrow className="w-6 ml-1" />
@@ -41,7 +41,7 @@ export default function Home() {
               <Link
                 href="mailto:hugopetla@gmail.com"
                 target="_blank"
-                className="ml-4 text-lg font-medium capitalize text-dark underline"
+                className="ml-4 text-lg font-medium capitalize text-dark underline dark:text-light "
               >
                 contact
               </Link>

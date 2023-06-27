@@ -1,4 +1,5 @@
 "use client";
+import Script from "next/script";
 import { Footer } from "../components/Footer";
 import Navbar from "../components/Navbar";
 import "./styles/globals.css";
@@ -13,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`bg-light ${mont.className}`}>
+      <body className={`bg-light dark:bg-dark ${mont.className}`}>
         <Navbar />
         {children}
         <Footer />
