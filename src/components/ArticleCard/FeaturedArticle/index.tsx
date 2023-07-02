@@ -1,6 +1,6 @@
-import Image, { StaticImageData } from "next/image";
+import { AnimatedImg } from "@/components/AnimatedImg";
+import { StaticImageData } from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 
 interface FeaturedArticleProps {
   img: StaticImageData;
@@ -10,14 +10,12 @@ interface FeaturedArticleProps {
   link: string;
 }
 
-const FramerImage = motion(Image);
-
 const FeaturedArticle = ({
   img,
   title,
   time,
   summary,
-  link,
+  link
 }: FeaturedArticleProps) => {
   return (
     <li className="relative col-span-1 w-full p-4 bg-light border border-solid border-dark rounded-2xl dark:bg-dark dark:border-light">
@@ -27,13 +25,7 @@ const FeaturedArticle = ({
         target="_blank"
         href={link}
       >
-        <FramerImage
-          src={img}
-          alt={title}
-          className="w-full h-auto"
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.2 }}
-        />
+        <AnimatedImg img={img} title={title} />
       </Link>
       <Link href={link} target="_blank">
         <h2 className="capitalize text-2xl font-bold my-2 hover:underline">

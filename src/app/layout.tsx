@@ -1,14 +1,14 @@
 "use client";
-import Script from "next/script";
+import { Montserrat } from "next/font/google";
+import "./styles/globals.css";
+
 import { Footer } from "../components/Footer";
 import Navbar from "../components/Navbar";
-import "./styles/globals.css";
-import { Montserrat } from "next/font/google";
 
 const mont = Montserrat({ subsets: ["latin"], variable: "--font-mont" });
 
 export default function RootLayout({
-  children,
+  children
 }: {
   children: React.ReactNode;
 }) {

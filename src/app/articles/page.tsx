@@ -21,7 +21,7 @@ const Articles = () => {
           <AnimatedText text="Words Can Change the World" className="mb-16" />
           <ul className="grid grid-cols-2 gap-16">
             <FeaturedArticle
-              title=" Build A Custom Pagination Component In Reactjs From Scratch"
+              title="Build A Custom Pagination Component In Reactjs From Scratch"
               summary="Learn how to build a custom pagination component in ReactJS from
             scratch. Follow this step-by-step guide to integrate Pagination
             component in your ReactJS project."
@@ -30,38 +30,24 @@ const Articles = () => {
               img={PaginationComponentArticle}
             />
             <FeaturedArticle
-              title=" Build A Custom Pagination Component In Reactjs From Scratch"
-              summary="Learn how to build a custom pagination component in ReactJS from
-            scratch. Follow this step-by-step guide to integrate Pagination
-            component in your ReactJS project."
+              title="Responsive Web Design with Next.js and Tailwind CSS: Best Practices and Techniques"
+              summary="This article can focus on responsive design techniques using Next.js and Tailwind CSS. Explain the concept of responsive design and demonstrate how to create a responsive layout using the utility classes and features provided by Tailwind CSS."
               link="/"
               time="9 min read"
               img={PaginationComponentArticle}
             />
           </ul>
-          <h2 className="font-bold text-4xl w-full text-center my-16 mt-32">
+          {/* <h2 className="font-bold text-4xl w-full text-center my-16 mt-32">
             All Articles
           </h2>
           <ul>
             <NormalArticle
-              title=" Build A Custom Pagination Component In Reactjs From Scratch"
+              title="Responsive Web Design with Next.js and Tailwind CSS: Best Practices and Techniques"
               link="/"
               date="April 29th, 2023"
               img={PaginationComponentArticle}
             />
-            <NormalArticle
-              title=" Build A Custom Pagination Component In Reactjs From Scratch"
-              link="/"
-              date="April 29th, 2023"
-              img={PaginationComponentArticle}
-            />
-            <NormalArticle
-              title=" Build A Custom Pagination Component In Reactjs From Scratch"
-              link="/"
-              date="April 29th, 2023"
-              img={PaginationComponentArticle}
-            />
-          </ul>
+          </ul> */}
         </div>
       </main>
     </div>

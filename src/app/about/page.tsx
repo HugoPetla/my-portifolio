@@ -42,7 +42,7 @@ const experience = [
     address:
       "425 Alameda Barão de Limeira, Campos Elíseos, São Paulo, SP 01202-001, Brazil",
     work: "In my role as a Frontend Developer, I specialize in web development using Nextjs/React. With a strong understanding of both client and server-side development, I am skilled in utilizing various libraries such as Redux, Material-UI (mui), Lodash, and others to deliver high-quality web applications. My expertise in developing responsive and accessible user interfaces, optimizing performance, and implementing best practices for modern web development has enabled me to deliver outstanding solutions for clients across diverse industries. I am committed to staying up-to-date with the latest web technologies, tools, and frameworks and applying them to create compelling and visually engaging web applications that meet user needs and exceed expectations.",
-    time: "December 2021 - Present",
+    time: "December 2021 - Present"
   },
   {
     position: "Frontend",
@@ -51,7 +51,7 @@ const experience = [
     address:
       "527 Carlos Cavalcantti Ave, Suite 1. Uvaranas, Ponta Grossa, Paraná, Brazil",
     work: "Work in collaboration with the squad to develop and maintain back-office applications and interfaces in order to improve administrative operations. Responsible for prototyping UI / UX interface design, simulating the user experience.",
-    time: "October 2020 - December 2021",
+    time: "October 2020 - December 2021"
   },
   {
     position: "Learning Assistant",
@@ -60,7 +60,7 @@ const experience = [
     address:
       "802 Julio de Castilho St, Center, Ponta Grossa, PR 84010-220, Brazil",
     work: "I worked as the responsible for managing the team of instructors and service; organizing the classes; monitoring the collective and individual learning process of the students; and promoting conflict resolution.",
-    time: "May 2019 - Setember 2020",
+    time: "May 2019 - Setember 2020"
   },
   {
     position: "Instructor",
@@ -69,7 +69,7 @@ const experience = [
     address:
       "802 Julio de Castilho St, Center, Ponta Grossa, PR 84010-220, Brazil",
     work: "I worked at UPTIME as an English instructor, where I had the opportunity to contribute to their mission of transforming lives through foreign language education, fostering entrepreneurship, and developing leaders.",
-    time: "September 2018 - May 2019",
+    time: "September 2018 - May 2019"
   },
   {
     position: "Frontend",
@@ -78,8 +78,8 @@ const experience = [
     address:
       "802 Julio de Castilho St, Center, Ponta Grossa, PR 84010-220, Brazil",
     work: "I worked in the mobile development of the CRM system (customer relationship management), using the Ionic framework. Soon after, I became responsible for the mobile development of the Route Now system (collection and transport management) of the Via Lácteos company.",
-    time: "March 2017 - March 2018",
-  },
+    time: "March 2017 - March 2018"
+  }
 ];
 
 const education = [
@@ -90,7 +90,7 @@ const education = [
     address:
       "General Carlos Cavalcanti Avenue, Uvaranas, Ponta Grossa, PR 84030-000, Brazil",
     work: "I hold a Master's degree in Computer Engineering from UEPG, which is ranked among the top 50 universities in Brazil according to the QS Latin America University Rankings and Times Higher Education (THE). For my Master's thesis, I focused on the traceability of commodities, specifically yerba mate, using blockchain technology.",
-    time: "March 2018 - May 2020",
+    time: "March 2018 - May 2020"
   },
   {
     position: "Bachelor of Computer Engineering ",
@@ -99,14 +99,14 @@ const education = [
     address:
       "General Carlos Cavalcanti Avenue, Uvaranas, Ponta Grossa, PR 84030-000, Brazil",
     work: "I hold a Bachelor's degree in Computer Engineering from UEPG, which is ranked among the top 50 universities in Brazil according to the QS Latin America University Rankings and Times Higher Education (THE). During my time at UEPG, I actively participated in various startups and excelled in competitions. Notably, I was awarded the 1st place in the Alltech Innovation Competition Brasil 2016, a competition focused on developing innovative solutions for the agribusiness sector to boost the local economy and foster collaboration between private enterprises and universities. As the founder of Milktech, our startup emerged as the champion of the competition.",
-    time: "January 2012 - December 2016",
-  },
+    time: "January 2012 - December 2016"
+  }
 ];
 
 const mainPersonalNumbers = [
   { value: 50, title: "satisfied clients" },
   { value: 40, title: "projects completed" },
-  { value: 4, title: "years of experience" },
+  { value: 4, title: "years of experience" }
 ];
 
 export default function About() {
@@ -144,9 +144,11 @@ export default function About() {
           <div className="col-span-3 relative w-80 h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 dark:border-light dark:bg-dark">
             <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark dark:bg-light" />
             <Image
+              priority
               src={profilePic}
               alt="HugoPetlaProfile"
               className="w-80 h-auto rounded-2xl"
+              sizes="(max-width: 768px) 100vw, (max-height: 1200px) 50vw, 33vw"
             />
           </div>
 

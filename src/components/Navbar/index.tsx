@@ -1,4 +1,4 @@
-"use client";
+"use strict";
 import Link from "next/link";
 import React from "react";
 import { usePathname } from "next/navigation";
@@ -9,7 +9,7 @@ import {
   LinkedInIcon,
   MoonIcon,
   SunIcon,
-  TwitterIcon,
+  TwitterIcon
 } from "../Icons";
 import { Logo } from "../Logo";
 import useThemeSwitcher from "@/hooks/useThemeSwitcher";
@@ -17,17 +17,17 @@ import useThemeSwitcher from "@/hooks/useThemeSwitcher";
 const personalLinks = [
   {
     link: "https://www.linkedin.com/in/hugo-petla/",
-    icon: "linkedin",
+    icon: "linkedin"
   },
   { link: "https://github.com/HugoPetla", icon: "github" },
-  { link: "https://twitter.com/7HuGo_", icon: "twitter" },
+  { link: "https://twitter.com/7HuGo_", icon: "twitter" }
 ];
 
 const navLinks = [
   { link: "/", title: "Home" },
   { link: "/about", title: "About" },
   { link: "/projects", title: "Projects" },
-  { link: "/articles", title: "Articles" },
+  { link: "/articles", title: "Articles" }
 ];
 
 function getIconComponent(iconName: string) {
@@ -46,7 +46,7 @@ function getIconComponent(iconName: string) {
 const CustomLink = ({
   href,
   title,
-  className = "",
+  className = ""
 }: {
   href: string;
   title: string;
@@ -106,7 +106,7 @@ const Navbar = () => {
           );
         })}
         <button
-          className={`ml-1 flex items-center justify-center rounded-full p-1 ${
+          className={`ml-2 flex items-center justify-center rounded-full p-1 w-7 ${
             mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
           }`}
           onClick={() => setMode(mode === "light" ? "dark" : "light")}
